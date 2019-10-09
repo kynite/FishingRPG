@@ -41,11 +41,18 @@ to make sure to train before going to capture the Ethereal Ultimatum.
 The Game:
 
 You start off with a basic fishing rod and a stick as a weapon, you also have
-100hp and worms (if bait is added)(Could also add a wallet feature, each time
-you buy a new rod, your wallet increases so you can buy better things).
+100hp and (worms if bait is added)(Could also add a wallet feature, each time
+you buy a new rod your wallet increases so you can buy better things).
 
 There are different lakes you can travel to and each lake has more dangerous
 but more rewarding fish.
+
+Each time you fish up a fish, you will enter battle with it. Better items will
+do more damage to the fish killing them quicker. Fights are a turn based
+system, you attack and then the fish attacks. You can also try to flee but wont
+guarantee you will leave. If you die, you will restart all way in the
+beginning.(Possibility of adding items to catch fish easier or take less
+damage, etc.)
 
 The goal is to capture the Ethereal Ultimatum which is the only fish that
 resides in the Ethereal lake. To capture it you will need the best weapon, and
@@ -56,6 +63,7 @@ better weapons, (possibly bait too if I decide to do that). At this shop
 you can also sell your Captured fish. The harder the fish would be to capture,
 the more money it is worth.
 
+*Lake names can change
 
 The Hooligan Lake:
 Easiest fish to capture
@@ -65,6 +73,8 @@ Where are we now Lake:
 -Normal difficulty, most likely need a new weapon to capture fish and they do
 more damage
 -Better rate for fish
+
+...More lakes will be added with growth in statistics
 
 Ethereal Lake (The End):
 Hardest fish to capture in the Game, you will need the best weapon and fishing
