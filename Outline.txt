@@ -1,8 +1,8 @@
 The Story:
 
 The game starts out with the main character. He is living a good life
-with a wife and 2 kids at the age of 28.
-Everything was going well until he had received a letter from his father.
+with a wife and two kids at the age of 28.
+Everything was going well until he had received a letter from his mother.
 
 The letter had read:
 "Hey Xunerophore{character name}, your father is at the end of his ropes. I
@@ -13,22 +13,22 @@ before he is gone"
 
 -Love Mom
 
-Xunerophore{character name} shocked, immediately pack his things and left for
+Xunerophore{character name} shocked, immediately packed his things and left for
 {location}, he left a note telling his family of why he was gone.
 
 18 hours later, Xunerophore{character name}arrived at {location} and got a ride
 straight to the hospital.
-Once he arrived he found mom sitting next to dad. His mom came up
+Once he arrived he found his mom sitting next to his dad. His mom came up
 and hugged Xunerophore{character} and expressed how much he appreciated him
-coming. Xunerophores{character name} mom explained to him that dad woke up that
-morning ecstatic, that he thought was finally ready to capture the final fish
-he needed.
+coming. Xunerophores{character name} mom explained to him that his
+dad woke up that morning ecstatic, that he thought was finally
+ready to capture the final fish he needed.
 Xunerophores
-{character name} mom then said that dad hadn't came back for a long time and
-when
-she went to the area where he was fishing, dad was laying on the beach and was
-bleeding and close to dying. Xunerophores mom left the room crying, he then
-decided to talk to his father.
+{character name}'s mom then said that his
+dad hadn't came back for a long time and when she went to the area where
+he was fishing, dad was laying on the beach and was bleeding and close to
+dying. Xunerophores mom left the room crying, he then decided to talk to his
+father.
 
 His father explained to him about the most dangerous but the most rarest Fish
 in the world. It was called the "Ethereal Ultimatums". This was the final fish
@@ -52,7 +52,7 @@ do more damage to the fish killing them quicker. Fights are a turn based
 system, you attack and then the fish attacks. You can also try to flee but wont
 guarantee you will leave. If you die, you will restart all way in the
 beginning.(Possibility of adding items to catch fish easier or take less
-damage, etc.)
+damage, etc.)(Make an option to be able to skip dialogue)
 
 The goal is to capture the Ethereal Ultimatum which is the only fish that
 resides in the Ethereal lake. To capture it you will need the best weapon, and
@@ -79,7 +79,7 @@ more damage
 Ethereal Lake (The End):
 Hardest fish to capture in the Game, you will need the best weapon and fishing
 rod to capture it.
-(I could also make it where if you dont have the best rod, you could fight a
+(I could also make it where if you don't have the best rod, you could fight a
 ghost of something, like the fish, and you would lose to it 100% of the time
 and there would be no way to run, so you lose and you reset all your progress
 for even trying to do something like that. OR you could use any rod and try to
