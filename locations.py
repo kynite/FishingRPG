@@ -1,23 +1,41 @@
 # CS 30
 # Period 4
 # Date : 11/18/2019
-# Krutik Rana
+# Krutik Rana Kytersize LakeKytersize Lake
 # Program description : Locations in a seperate file
 from tabulate import tabulate
+from Player import Xunerophore
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+map = [[" . ", " . ", " E ", " . ", " . "],
+       [" . ", " . ", " . ", " . ", " . "],
+       [" J ", " . ", " . ", " . ", " K "],
+       [" . ", " . ", " . ", " . ", " . "],
+       [" . ", " W ", " . ", " H ", " . "],
+       [" . ", " . ", " R ", " . ", " . "],
+       [" . ", " . ", " . ", " . ", " X "]]
 
 
 def location():
     """Commands that allow for movement on the map"""
     # While loop for continous play
     while True:
-        # Array of the map, formated using tabulate
-        map = [[None, None, 'Ethereal Lake', None, None],
-               [None, None, None, None, None],
-               ['Juilot Lake', None, None, None, 'Kytersize Lake'],
-               [None, None, None, None, None],
-               [None, 'Where are we now lake', None, 'Hooligan Lake', None],
-               [None, None, 'Residential Lake', None, None],
-               [None, None, None, 'Player', 'Home']]
         # Prints map out in a grid style using tabulate
         print(tabulate(map, tablefmt="grid"))
         # Tells user to type q to go to the previous menu
@@ -32,18 +50,22 @@ def location():
         user = user.lower()
         # Checks to see if user typed in movement command
         if user == 'north':
+            north()
             # prints out Movement
             print('Travelling North!')
         # Checks to see if user typed in movement command
         elif user == 'west':
+            west()
             # prints out Movement
             print('Travelling West!')
         # Checks to see if user typed in movement command
         elif user == 'east':
+            east()
             # prints out Movement
             print('Travelling East!')
         # Checks to see if user typed in movement command
         elif user == 'south':
+            south()
             # prints out Movement
             print('Travelling South!')
             # Checks to see if user typed q
@@ -63,3 +85,4 @@ locations = {'Hooligan Lake': ['Salmon', 'GoldFish', 'Guppy'],
              'Ethereal Lake': ['Ethereal Ultim\
 atum'], 'Residential Lake': ['Shopkeeper'],
              }
+location()
