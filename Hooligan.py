@@ -3,6 +3,16 @@
 # Date : 12/9/2019
 # Krutik Rana
 # Program description : Arriving at a lake interactions
+from characters import Player
+from enemy import *
+import enemy
+from random import randint
+from weapons import *
+import weapons
+
+player = Player(None, None)
+best_weapons = player.most_powerful_weapon()
+enemy_damage = best_weapons.damage
 
 
 def residential():
@@ -32,8 +42,17 @@ def hooligan_lake():
         action = input('choose an action: ')
         # Checks to see if user typed in fish
         if action == 'fish':
-            print("doesn't work")
-            pass
+            n = randint(1, 10)
+            if n < 11:
+                print('you encountered a Salmon!')
+                current_enemy = Salmon()
+                while player.hp > 0 or enemy.hp > 0:
+                    userinp = input("type a to attack, type r to run")
+                    if userinp == 'a':
+                        current_enemy.hp -= enemy_damage
+                        print(current_enemy.hp)
+                    if userinp == 'r':
+                        break
         # Checks to see if user typed in leave
         elif action == 'leave':
             # Exits the area and goes back to map

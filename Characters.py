@@ -12,7 +12,7 @@ class Player:
     Holds healing capability and best weapon
     """
     def __init__(self, x, y):
-        self.inventory = [wp.Stick(), wp.Bread()]  # Player inventory
+        self.inventory = [wp.Stick(), wp.SpikedBat(), wp.Bread(), wp.Maggot()]  # Player inventory
         self.playername = "X"  # Player name
         self.hp = 45  # Player health
         self.victory = False  # Player victory
@@ -96,6 +96,9 @@ ise type q to not use")
                         valid = True
                     except (ValueError, IndexError):
                         print("Invalid choice, try again.")
+
+    def attack(self):
+        best_weapon = self.most_powerful_weapon()
 
 
 def all_characters():
