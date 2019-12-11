@@ -12,9 +12,9 @@ class Player:
     Holds healing capability and best weapon
     """
     def __init__(self, x, y):
-        self.inventory = [wp.Stick(), wp.SpikedBat(), wp.Bread(), wp.Maggot()]  # Player inventory
+        self.inventory = [wp.Stick(), wp.Bread(), wp.Maggot()]  # Player inventory
         self.playername = "X"  # Player name
-        self.hp = 45  # Player health
+        self.hp = 100  # Player health
         self.victory = False  # Player victory
         self.gold = 0  # Player gold
 
