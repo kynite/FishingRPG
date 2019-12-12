@@ -3,16 +3,8 @@
 # Date : 12/9/2019
 # Krutik Rana
 # Program description : Arriving at a lake interactions
-from characters import Player
 from enemy import *
-import enemy
 from random import randint
-from weapons import *
-import weapons
-
-player = Player(None, None)
-best_weapons = player.most_powerful_weapon()
-enemy_damage = best_weapons.damage
 
 
 def residential():
@@ -23,8 +15,7 @@ def residential():
         action = input('choose an action: ')
         # Checks to see if user typed in purchase
         if action == 'purchase':
-            print("doesn't work")
-            pass
+            print("does not work")
         # Checks to see if user typed in leave
         elif action == 'leave':
             # Exits the area and goes back to map

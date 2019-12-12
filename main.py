@@ -50,6 +50,7 @@ def main_menu():
         print('type y to play the game')
         # Informs user to type q to quit the game
         print('type q to quit the game')
+        # Informs user to type help for help
         print('type help if you need help')
         # Gets user input
         selection = input('Make your selection: ')
@@ -59,9 +60,11 @@ def main_menu():
         if selection == 'y':
             # Runs the ingame menu function
             ingame_menu()
-        # Checks to see if q is typed
+        # Checks to see if help is typed
         elif selection == 'help':
+            # Runs help function
             help()
+        # Checks to see if q is typed
         elif selection == 'q':
             # Ends the game
             break
@@ -72,6 +75,7 @@ def main_menu():
 
 
 def gamestory():
+    """Prints out the main game story"""
     print(
           """ >> You wake up to a phone ring, its your Mother, "Xunerophore
 your father is in the hospital, come here immediately.". You leave your house
@@ -87,6 +91,7 @@ OBJECTIVE: Capture the Ethereal Ultimatum located at Ethereal
 
 
 def help():
+    """Prints out help"""
     print(
           """>> To get to locations on the map, go to map menu and travel with
 the instructions that are provided. To see what you are carrying, go to

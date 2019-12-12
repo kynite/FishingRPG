@@ -26,4 +26,7 @@
 - Added interactive elements on map (not finished)
 
 
-##
+## Version 0.4 Alpha
+- Enemies Added
+- Combat Added
+- Ending Added

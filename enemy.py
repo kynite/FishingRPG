@@ -5,8 +5,6 @@
 # Program description : Enemies of the game and their attributes
 from characters import Player
 from random import randint
-from weapons import *
-import weapons
 
 player = Player(None, None)
 best_weapons = player.most_powerful_weapon()
@@ -22,10 +20,6 @@ class Enemy():
     def __str__(self):
         """Gets the name of the child class and makes it a string"""
         return self.name
-
-    def is_alive(self):
-        """Gets the amount of health the enemy has to see if it still lives"""
-        return self.hp > 0
 
 
 class Salmon(Enemy):
@@ -100,44 +94,69 @@ class Ethereal(Enemy):
         # Name of the enemy
         self.name = 'Ethereal Ultimatum'
         # Amount of health the enemy has
-        self.hp = 1
+        self.hp = 1000
         # Damage the enemy does to player
         self.damage = 20
 
 
 def enemyencounterethereal():
+    """ Enemy encounter for Ethereal Ultimatum"""
+    # Tells user what enemy
     print('you come face to face with the Ethereal Ultimatum!')
+    # Sets the enemy
     current_enemy = Ethereal()
+    # while the player hp and enemy hp is above zero keep fighting
     while player.hp > 0 and current_enemy.hp > 0:
+        # give the enemy an action
         enemy_action = randint(1, 2)
+        # takes user input to attack
         userinp = input("type a to attack!: ")
+        # checks if user typed in a to attack
         if userinp == 'a':
+            # attacks the enemy and removes its health from weapon damage
             current_enemy.hp -= enemy_damage
+            # informs user of what happened
             print(f'>> The {current_enemy} has {current_enemy.hp} HP left')
-        if enemy_action == 1:
+        # checks if user typed in anything else
+        else:
+            # Tells user they missed
+            print('You missed!')
+        # if the enemy action is 1 and health is above zero then run this
+        if enemy_action == 1 and current_enemy.hp > 0:
+            # Damage the player
             player.hp -= current_enemy.damage
+            # tell the user of what happened
             print(f'The {current_enemy.name} attacks and deals\
  {current_enemy.damage} Damage!')
+            # tell the user how much health they have left
             if player.hp > 0:
                 print(f'you have {player.hp} Hp left')
-        elif enemy_action == 2:
+        # if the enemy action is 2 and health is above zero then run this
+        elif enemy_action == 2 and current_enemy.hp > 0:
+            # tell user what happened
             print(f'the {current_enemy.name} missed!')
-        else:
-            print('invalid input')
+    # if player hp is 0 then stop the game
     if player.hp <= 0:
+        # tell user they are dead
         print('DEAD')
+        # exit the game
         exit()
+    # if user isnt dead
     else:
+        # game winning text
         print(
               """>> You go to your fathers collection and add the Ethereal
 Ultimatum. It got placed in the only slot that was missing a fish. You then
 turn around to see your father out of the hospital with tears in his eyes.
 THE END
               """)
+        # end the game
         exit()
 
 
 def enemyencountersalmon():
+    """Enemy encounter for salmon"""
+    # Same Code as Ethereal just with salmon and does not end game
     print('you encountered a Salmon!')
     current_enemy = Salmon()
     while player.hp > 0 and current_enemy.hp > 0:
@@ -146,13 +165,15 @@ def enemyencountersalmon():
         if userinp == 'a':
             current_enemy.hp -= enemy_damage
             print(f'>> The {current_enemy} has {current_enemy.hp} HP left')
-        if enemy_action == 1:
+        else:
+            print('You missed!')
+        if enemy_action == 1 and current_enemy.hp > 0:
             player.hp -= current_enemy.damage
             print(f'The {current_enemy.name} attacks and deals\
  {current_enemy.damage} Damage!')
             if player.hp > 0:
                 print(f'you have {player.hp} Hp left')
-        elif enemy_action == 2:
+        elif enemy_action == 2 and current_enemy.hp > 0:
             print(f'the {current_enemy.name} missed!')
         else:
             print('invalid input')
@@ -160,12 +181,17 @@ def enemyencountersalmon():
         print('DEAD')
         exit()
     else:
+        # tells user what enemy was killed and how much gold was earned
         print(f'You killed the {current_enemy.name} and obtained 5 gold')
+        # Gives user the gold
         player.gold += 5
+        # tells user how much gold they have in their inventory
         print(f'you have {str(player.gold)} gold in total')
 
 
 def enemyencountergoldfish():
+    """ Enemy encounter for gold fish"""
+    # Same code as Salmon except enemy is now gold fish
     print('you encountered a Gold fish!')
     current_enemy = GoldFish()
     while player.hp > 0 and current_enemy.hp > 0:
@@ -174,13 +200,15 @@ def enemyencountergoldfish():
         if userinp == 'a':
             current_enemy.hp -= enemy_damage
             print(f'>> The {current_enemy} has {current_enemy.hp} HP left')
-        if enemy_action == 1:
+        else:
+            print('You missed!')
+        if enemy_action == 1 and current_enemy.hp > 0:
             player.hp -= current_enemy.damage
             print(f'The {current_enemy.name} attacks and deals\
  {current_enemy.damage} Damage!')
             if player.hp > 0:
                 print(f'you have {player.hp} Hp left')
-        elif enemy_action == 2:
+        elif enemy_action == 2 and current_enemy.hp > 0:
             print(f'the {current_enemy.name} missed!')
         else:
             print('invalid input')
@@ -194,6 +222,8 @@ def enemyencountergoldfish():
 
 
 def enemyencounterguppy():
+    """Enemy encounter for guppy"""
+    # Same code as salmon except enemy is now guppy
     print('you encountered a Guppy!')
     current_enemy = Guppy()
     while player.hp > 0 and current_enemy.hp > 0:
