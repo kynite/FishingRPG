@@ -100,9 +100,41 @@ class Ethereal(Enemy):
         # Name of the enemy
         self.name = 'Ethereal Ultimatum'
         # Amount of health the enemy has
-        self.hp = 1000
+        self.hp = 1
         # Damage the enemy does to player
         self.damage = 20
+
+
+def enemyencounterethereal():
+    print('you come face to face with the Ethereal Ultimatum!')
+    current_enemy = Ethereal()
+    while player.hp > 0 and current_enemy.hp > 0:
+        enemy_action = randint(1, 2)
+        userinp = input("type a to attack!: ")
+        if userinp == 'a':
+            current_enemy.hp -= enemy_damage
+            print(f'>> The {current_enemy} has {current_enemy.hp} HP left')
+        if enemy_action == 1:
+            player.hp -= current_enemy.damage
+            print(f'The {current_enemy.name} attacks and deals\
+ {current_enemy.damage} Damage!')
+            if player.hp > 0:
+                print(f'you have {player.hp} Hp left')
+        elif enemy_action == 2:
+            print(f'the {current_enemy.name} missed!')
+        else:
+            print('invalid input')
+    if player.hp <= 0:
+        print('DEAD')
+        exit()
+    else:
+        print(
+              """>> You go to your fathers collection and add the Ethereal
+Ultimatum. It got placed in the only slot that was missing a fish. You then
+turn around to see your father out of the hospital with tears in his eyes.
+THE END
+              """)
+        exit()
 
 
 def enemyencountersalmon():
@@ -110,19 +142,18 @@ def enemyencountersalmon():
     current_enemy = Salmon()
     while player.hp > 0 and current_enemy.hp > 0:
         enemy_action = randint(1, 2)
-        userinp = input("type a to attack, type r to run: ")
+        userinp = input("type a to attack!: ")
         if userinp == 'a':
             current_enemy.hp -= enemy_damage
-            print(current_enemy.hp)
+            print(f'>> The {current_enemy} has {current_enemy.hp} HP left')
         if enemy_action == 1:
             player.hp -= current_enemy.damage
-            print(f'The {current_enemy.name} attack and dealt\
+            print(f'The {current_enemy.name} attacks and deals\
  {current_enemy.damage} Damage!')
-            print(f'you have {player.hp} Hp left')
+            if player.hp > 0:
+                print(f'you have {player.hp} Hp left')
         elif enemy_action == 2:
             print(f'the {current_enemy.name} missed!')
-        elif userinp == 'r':
-            break
         else:
             print('invalid input')
     if player.hp <= 0:
@@ -139,19 +170,18 @@ def enemyencountergoldfish():
     current_enemy = GoldFish()
     while player.hp > 0 and current_enemy.hp > 0:
         enemy_action = randint(1, 2)
-        userinp = input("type a to attack, type r to run: ")
+        userinp = input("type a to attack!: ")
         if userinp == 'a':
             current_enemy.hp -= enemy_damage
-            print(current_enemy.hp)
+            print(f'>> The {current_enemy} has {current_enemy.hp} HP left')
         if enemy_action == 1:
             player.hp -= current_enemy.damage
-            print(f'The {current_enemy.name} attack and dealt\
+            print(f'The {current_enemy.name} attacks and deals\
  {current_enemy.damage} Damage!')
-            print(f'you have {player.hp} Hp left')
+            if player.hp > 0:
+                print(f'you have {player.hp} Hp left')
         elif enemy_action == 2:
             print(f'the {current_enemy.name} missed!')
-        elif userinp == 'r':
-            break
         else:
             print('invalid input')
     if player.hp <= 0:
@@ -168,19 +198,20 @@ def enemyencounterguppy():
     current_enemy = Guppy()
     while player.hp > 0 and current_enemy.hp > 0:
         enemy_action = randint(1, 2)
-        userinp = input("type a to attack, type r to run: ")
+        userinp = input("type a to attack!: ")
         if userinp == 'a':
             current_enemy.hp -= enemy_damage
-            print(current_enemy.hp)
+            print(f'>> The {current_enemy} has {current_enemy.hp} HP left')
+        else:
+            print('You missed!')
         if enemy_action == 1:
             player.hp -= current_enemy.damage
-            print(f'The {current_enemy.name} attack and dealt\
+            print(f'The {current_enemy.name} attacks and deals\
  {current_enemy.damage} Damage!')
-            print(f'you have {player.hp} Hp left')
+            if player.hp > 0:
+                print(f'you have {player.hp} Hp left')
         elif enemy_action == 2:
             print(f'the {current_enemy.name} missed!')
-        elif userinp == 'r':
-            break
         else:
             print('invalid input')
     if player.hp <= 0:

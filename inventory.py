@@ -13,6 +13,7 @@ def inventory():
     """Commands to access the characters inventory"""
     # While loop to continously play
     while True:
+        print('\ntype [backpack], [heal]')
         # Print statement detailing how to go to the last menu
         print('\ntype q to go back to previous menu')
         # Aquiring user input for what they want to access of the inventory

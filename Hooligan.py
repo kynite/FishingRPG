@@ -125,8 +125,7 @@ def ethereal():
         action = input('choose an action: ')
         # Checks to see if user typed in fish
         if action == 'fish':
-            print("doesn't work")
-            pass
+            enemyencounterethereal()
         # Checks to see if user typed in leave
         elif action == 'leave':
             # Exits the area and goes back to map
