@@ -5,6 +5,7 @@
 # Program description : Arriving at a lake interactions
 from enemy import *
 from random import randint
+from enemy import player
 
 
 def residential():
@@ -15,7 +16,7 @@ def residential():
         action = input('choose an action: ')
         # Checks to see if user typed in purchase
         if action == 'purchase':
-            print("does not work")
+            player.buyshop()
         # Checks to see if user typed in leave
         elif action == 'leave':
             # Exits the area and goes back to map
@@ -24,6 +25,8 @@ def residential():
         elif action == 'q':
             # Exits the area aswell incase users were used to typing q
             break
+        else:
+            print('invalid input')
 
 
 def hooligan_lake():

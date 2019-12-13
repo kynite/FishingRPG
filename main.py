@@ -5,7 +5,7 @@
 # Program description : Main game file to run all code
 import inventory as inv
 import locations as loc
-import characters as ch
+import Characters as ch
 
 
 def ingame_menu():

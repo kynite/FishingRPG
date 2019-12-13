@@ -3,10 +3,7 @@
 # Date : 12/9/2019
 # Krutik Rana
 # Program description : Players inventory and command to heal player
-from characters import Player
-
-# Creates and instance of player to be used
-player = Player(None, None)
+from enemy import player
 
 
 def inventory():

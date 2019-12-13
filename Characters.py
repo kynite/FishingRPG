@@ -4,6 +4,7 @@
 # Krutik Rana
 # Program description : The Player and extra info about characters
 import weapons as wp
+from enemy import *
 
 
 class Player:
@@ -17,7 +18,11 @@ class Player:
         self.playername = "X"  # Player name
         self.hp = 100  # Player health
         self.victory = False  # Player victory
-        self.gold = 0  # Player gold
+        self.gold = 1000  # Player gold
+        self.shop = [
+                     wp.Bat(), wp.SpikedBat(), wp.Sword(), wp.Sandwich(),
+                     wp.Bread()
+                     ]
 
     def print_inventory(self):
         """Prints the players inventory"""
@@ -97,6 +102,62 @@ ise type q to not use")
                         valid = True
                     except (ValueError, IndexError):
                         print("Invalid choice, try again.")
+
+    def buyshop(self):
+        for item in self.shop:
+            print(f'you can buy a {item} for {item.value}')
+        userinp = input('What would you like to buy?: ')
+        userinp = userinp.lower()
+        if userinp == 'bat':
+            if self.gold >= 50:
+                item = self.shop.pop(0)
+                self.inventory.append(item)
+                self.shop.insert(0, item)
+                self.gold += -50
+                print(f'you have {self.gold} gold left')
+            else:
+                print('insufficient gold')
+        elif userinp == 'spiked bat':
+            if self.gold >= 150:
+                item = self.shop.pop(1)
+                self.inventory.append(item)
+                self.shop.insert(1, item)
+                self.gold += -150
+                print(f'you have {self.gold} gold left')
+            else:
+                print('insufficient gold')
+        elif userinp == 'sword':
+            if self.gold >= 500:
+                item = self.shop.pop(2)
+                self.inventory.append(item)
+                self.shop.insert(2, item)
+                self.gold += -500
+                print(f'you have {self.gold} gold left')
+            else:
+                print('insufficient gold')
+        elif userinp == 'sandwich':
+            if self.gold >= 100:
+                item = self.shop.pop(3)
+                self.inventory.append(item)
+                self.shop.insert(3, item)
+                self.gold += -100
+                print(f'you have {self.gold} gold left')
+            else:
+                print('insufficient gold')
+        elif userinp == 'bread':
+            if self.gold >= 60:
+                item = self.shop.pop(4)
+                self.inventory.append(item)
+                self.shop.insert(4, item)
+                self.gold += -60
+                print(f'you have {self.gold} gold left')
+            else:
+                print('insufficient gold')
+        else:
+            print('invalid input')
+
+    def attack(self):
+        enemyencounterethereal().current_enemy.hp -= self.most_powerful_weapon()
 
 
 def all_characters():

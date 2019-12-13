@@ -3,10 +3,11 @@
 # Date : 12/9/2019
 # Krutik Rana
 # Program description : Enemies of the game and their attributes
-from characters import Player
+from Characters import Player
 from random import randint
 
 player = Player(None, None)
+### Make Combat part of player class ###
 best_weapons = player.most_powerful_weapon()
 enemy_damage = best_weapons.damage
 
@@ -114,7 +115,7 @@ def enemyencounterethereal():
         # checks if user typed in a to attack
         if userinp == 'a':
             # attacks the enemy and removes its health from weapon damage
-            current_enemy.hp -= enemy_damage
+            player.attack()
             # informs user of what happened
             print(f'>> The {current_enemy} has {current_enemy.hp} HP left')
         # checks if user typed in anything else

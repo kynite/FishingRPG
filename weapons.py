@@ -25,27 +25,30 @@ class Bat(WeaponName):
     """A weapon that the player can use"""
     def __init__(self):
         # Name of the weapon
-        self.name = 'bat'
+        self.name = 'Bat'
         # Damage of the weapon
         self.damage = 3
+        self.value = 50
 
 
 class SpikedBat(WeaponName):
     """A weapon that the player can use"""
     def __init__(self):
         # Name of the weapon
-        self.name = 'spiked bat'
+        self.name = 'Spiked Bat'
         # Damage of the weapon
         self.damage = 5
+        self.value = 150
 
 
 class Sword(WeaponName):
     """A weapon that the player can use"""
     def __init__(self):
         # Name of the weapon
-        self.name = 'sword'
+        self.name = 'Sword'
         # Damage of the weapon
         self.damage = 10
+        self.value = 500
 
 
 class Consumable:
@@ -66,6 +69,7 @@ class Sandwich(Consumable):
         self.name = 'Sandwich'
         # Healing value of the consumable
         self.healing_value = 10
+        self.value = 100
 
 
 class Bread(Consumable):
@@ -74,6 +78,7 @@ class Bread(Consumable):
         self.name = 'Bread'
         # Healing value of the consumable
         self.healing_value = 5
+        self.value = 60
 
 
 class Maggot(Consumable):
@@ -82,3 +87,4 @@ class Maggot(Consumable):
         self.name = 'Maggot'
         # Healing value of the consumable
         self.healing_value = 1
+        self.value = 3

@@ -6,7 +6,7 @@
 from tabulate import tabulate
 from world import *
 import world
-from characters import Player
+from Characters import Player
 import Hooligan as hg
 
 

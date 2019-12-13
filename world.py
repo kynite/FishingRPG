@@ -3,8 +3,7 @@
 # Date : 12/9/2019
 # Krutik Rana
 # Program description : Map of the game
-
-from characters import Player
+from Characters import Player
 
 
 class MapTile:
