@@ -19,6 +19,8 @@ def location():
         print(tabulate(world.world_map, tablefmt="grid"))
         # Tells user to type q to go to the previous menu
         print('\ntype q to go back to previous menu')
+        print('Do not leave the border of the map otherwise game will crash')
+        print('Capitalization does not matter')
         print('North')
         print('West')
         print('East')

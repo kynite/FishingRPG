@@ -5,6 +5,8 @@
 # Program description : Map of the game
 from Characters import Player
 
+player = Player(3, 6)
+
 
 class MapTile:
     """Parent Class to child classes in terms of position and naming"""
@@ -74,4 +76,4 @@ world_map = [[None, None, Ethereal(2, 0), None, None],
              [None, None, None, None, None],
              [None, Where(1, 4), None, Hooligan(3, 4), None],
              [None, None, Residential(2, 5), None, None],
-             [None, None, None, Player(3, 6), None]]
+             [None, None, None, player, None]]

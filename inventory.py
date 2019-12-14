@@ -3,7 +3,7 @@
 # Date : 12/9/2019
 # Krutik Rana
 # Program description : Players inventory and command to heal player
-from enemy import player
+from world import player
 
 
 def inventory():

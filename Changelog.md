@@ -30,3 +30,11 @@
 - Enemies Added
 - Combat Added
 - Ending Added
+
+## Version 1.0 Release
+- Full game working
+- Shop added
+- Enemies optimized
+- Added more Enemies
+- Added more Weapons
+- Added more Consumables
